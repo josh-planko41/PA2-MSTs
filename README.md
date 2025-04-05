@@ -15,7 +15,7 @@ Given an input that looks like the following
 ```bash
 ./pa2.sh --graph sample_graphs/graph.txt
 ```
-Your code should output the cost of the MST in a single line. **If no MST exists (i.e., the graph is disconnected), you should print -1.** A few testing graphs are provided, but you should study the format and construct, by hand or automatically, graphs to test for edge cases. 
+Your code should output the cost of the MST in a single line. **If no MST exists (i.e., the graph is disconnected), you should print the word DISCONNECTED.** A few testing graphs are provided, but you should study the format and construct, by hand or automatically, new graphs to test for edge cases. 
 
 #### Notes:
 
