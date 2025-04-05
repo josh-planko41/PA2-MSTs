@@ -1,4 +1,4 @@
-package hw3_template;
+package pa2_template;
 
 /*
  * GraphArgParser parses command line arguments --graph_file, s, t, and --alg

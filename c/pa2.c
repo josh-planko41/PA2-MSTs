@@ -11,20 +11,7 @@ int main(int argc, char *argv[]) {
     // Argument parsing
     int i = 1;
     while (i < argc) {
-        // Grab the algorithm name
-        if(strcmp(argv[i], "--alg") == 0) {
-            i++;
-            alg = argv[i];
-        } 
-        else if(strcmp(argv[i], "-s") == 0) {
-            i++;
-            s = argv[i];
-        } 
-        else if(strcmp(argv[i], "-t") == 0) {
-            i++;
-            t = argv[i];
-        } 
-        else if(strcmp(argv[i], "--graph") == 0) {
+        if(strcmp(argv[i], "--graph") == 0) {
             i++;
             graph_file = argv[i];
         } 
@@ -54,10 +41,4 @@ int main(int argc, char *argv[]) {
         c = atoi(buffer+4);
         printf("Edge (%c, %c) with weight %d\n", buffer[0], buffer[2], c);
     }
-
-    // Our commandline arguments are here! Print them
-    printf("%s\n", alg);
-    printf("Source: %s\n", s);
-    printf("Target: %s\n", t);
-
 }

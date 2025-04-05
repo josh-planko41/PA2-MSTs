@@ -5,22 +5,18 @@
 # the same regardless of the language you use.
 #
 # Test with a line like:
-# ./hw3.sh -s A -t C --alg SP --graph graph.txt
+# ./pa2.sh --graph graph.txt
 #
-# You should handle alg options named...
-# SP
-# MST-Lin
-# MST-PQ
-#
-# and return the relevant cost.
+# It should construct an MST using Kruskal's algorithm
+# and print the relevant cost.
 
 
 # If using python
 # Update to python3 if necessary!
-python python/hw3.py "$@" 
+python python/pa2.py "$@" 
 
 # If using java
-java -cp java/bin/main hw3_template.hw3 "$@"
+java -cp java/build/classes/java/main pa2_template.pa2 "$@"
 
 # If using c
-c/hw3 "$@"
+c/pa2 "$@"
