@@ -18,14 +18,14 @@ public class UnionFind {
         }
     }
 
-    int find(int x){
+    public int find(int x){
         if (p[x] == x){
             return x;
         }
         return (find(p[x]));
     }
 
-    void unionSets(int s1, int s2){
+    public void unionSets(int s1, int s2){
         int r1, r2; // Roots of Sets
 
         r1 = find(s1);
@@ -44,7 +44,7 @@ public class UnionFind {
         }
     }
 
-    boolean same_component(int s1, int s2){
+    public boolean same_component(int s1, int s2){
         return(find(s1) == find(s2));
     }
 
