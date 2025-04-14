@@ -8,6 +8,8 @@ import java.io.BufferedReader;
 public class pa2 {
     public static void main(String[] args) {
         GraphArgParser parser = new GraphArgParser(args);
+        Graph graph = new Graph();
+        Kruskal kruskal = new Kruskal();
 
         // This should probably be part of the graph class that you write!
         BufferedReader is = null;
@@ -16,12 +18,19 @@ public class pa2 {
             String line;
             while((line = is.readLine()) != null) {
                 int c = Integer.parseInt(line.substring(4));
-                System.out.printf("Edge (%c, %c) with weight %d\n", 
-                    line.charAt(0), 
-                    line.charAt(2), 
-                    c);
+                // System.out.printf("Edge (%c, %c) with weight %d\n", 
+                    // line.charAt(0), 
+                    //line.charAt(2), 
+                    // c);
+                graph.addEdge(line.charAt(0), line.charAt(2), c);
             }
             is.close();
+            int weight = kruskal.kruskal(graph);
+            if (weight > 0) {
+                System.out.print(weight);
+            } else {
+                System.out.print("Disconnected");
+            }
         } catch(Exception e) {
             System.err.println("File Error:");
             System.err.println(e);

@@ -13,10 +13,10 @@
 
 # If using python
 # Update to python3 if necessary!
-python python/pa2.py "$@" 
+# python python/pa2.py "$@" 
 
 # If using java
 java -cp java/build/classes/java/main pa2_template.pa2 "$@"
 
 # If using c
-c/pa2 "$@"
+# c/pa2 "$@"

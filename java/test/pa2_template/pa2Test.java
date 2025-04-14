@@ -7,5 +7,5 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class pa2Test {
-    // Tests here
+    
 }
