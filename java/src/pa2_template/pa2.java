@@ -26,10 +26,10 @@ public class pa2 {
             }
             is.close();
             int weight = kruskal.kruskal(graph);
-            if (weight > 0) {
-                System.out.print(weight);
+            if (weight >= 0 && !graph.getEdgeList().isEmpty()) {
+                System.out.println(weight);
             } else {
-                System.out.print("Disconnected");
+                System.out.println("Disconnected");
             }
         } catch(Exception e) {
             System.err.println("File Error:");

@@ -9,8 +9,8 @@ public class UnionFind {
 
     public UnionFind(int setSize){
         this.n = setSize;
-        this.p = new int[n];
-        this.size = new int[n];
+        this.p = new int[n + 2];
+        this.size = new int[n + 2];
 
         for (int i = 0; i < n; i++){
             p[i] = i;

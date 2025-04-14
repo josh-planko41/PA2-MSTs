@@ -16,7 +16,7 @@
 # python python/pa2.py "$@" 
 
 # If using java
-java -cp java/build/classes/java/main pa2_template.pa2 "$@"
+java -cp java/bin/main pa2_template.pa2 "$@"
 
 # If using c
 # c/pa2 "$@"

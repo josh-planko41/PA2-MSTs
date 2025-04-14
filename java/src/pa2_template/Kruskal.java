@@ -20,7 +20,7 @@ public class Kruskal {
 
         Collections.sort(edges);
 
-        for (int i = 0; i <= edges.size(); i++){
+        for (int i = 0; i < edges.size(); i++){
             Edge edge = edges.get(i);
             int edgeV1 = graph.getInt(edge.v1);
             int edgeV2 = graph.getInt(edge.v2);
