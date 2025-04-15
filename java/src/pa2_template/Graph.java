@@ -23,6 +23,7 @@ public class Graph {
         this.edges = new ArrayList<Edge>();
     }
 
+    // Received small bits of help from Cam about how to correctly use the hash maps
     public void addEdge(char source, char dest, int weight){
         if (!char2Int.containsKey(source)){
             vertices++;

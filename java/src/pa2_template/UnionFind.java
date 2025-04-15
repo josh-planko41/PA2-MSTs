@@ -17,7 +17,7 @@ public class UnionFind {
 
     public UnionFind(int setSize){
         this.n = setSize;
-        this.p = new int[n + 2];
+        this.p = new int[n + 2];    // avoids off by one errors
         this.size = new int[n + 2]; // avoids off by one errors
 
         for (int i = 0; i < n; i++){
