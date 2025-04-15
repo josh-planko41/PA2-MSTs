@@ -26,7 +26,7 @@ public class pa2 {
             }
             is.close();
             int weight = kruskal.kruskal(graph);
-            if (weight >= 0 && !graph.getEdgeList().isEmpty()) {
+            if (weight >= 0) {
                 System.out.println(weight);
             } else {
                 System.out.println("Disconnected");

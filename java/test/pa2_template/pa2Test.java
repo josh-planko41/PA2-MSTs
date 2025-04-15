@@ -27,4 +27,61 @@ class pa2Test {
         int weight = k.kruskal(graph);
         assertEquals(weight, 2);
     }
+
+    @Test
+    public void twoEdgeGraphTest(){
+        Graph graph = new Graph();
+        Kruskal k = new Kruskal();
+        graph.addEdge('A', 'B', 2);
+        graph.addEdge('A', 'C', 2);
+        int weight = k.kruskal(graph);
+        assertEquals(weight, 4);
+    }
+
+    @Test
+    public void twoEdgeDisGraphTest(){
+        Graph graph = new Graph();
+        Kruskal k = new Kruskal();
+        graph.addEdge('A', 'B', 2);
+        graph.addEdge('C', 'D', 2);
+        int weight = k.kruskal(graph);
+        assertEquals(weight, -1);
+    }
+
+    @Test
+    public void cycleTestAllSameWeight(){
+        Graph graph = new Graph();
+        Kruskal k = new Kruskal();
+        graph.addEdge('A', 'B', 2);
+        graph.addEdge('B', 'C', 2);
+        graph.addEdge('C', 'D', 2);
+        graph.addEdge('D', 'E', 2);
+        graph.addEdge('E', 'F', 2);
+        graph.addEdge('F', 'A', 2);
+        int weight = k.kruskal(graph);
+        assertEquals(weight, 10);
+    }
+
+    @Test
+    public void sameVertexTest(){
+        Graph graph = new Graph();
+        Kruskal k = new Kruskal();
+        graph.addEdge('A', 'A', 2);
+        int weight = k.kruskal(graph);
+        assertEquals(weight, 0);
+    }
+
+    @Test
+    public void doubleCycleDisconectedTest(){
+        Graph graph = new Graph();
+        Kruskal k = new Kruskal();
+        graph.addEdge('A', 'B', 2);
+        graph.addEdge('B', 'C', 2);
+        graph.addEdge('C', 'A', 2);
+        graph.addEdge('D', 'E', 2);
+        graph.addEdge('E', 'F', 2);
+        graph.addEdge('F', 'D', 2);
+        int weight = k.kruskal(graph);
+        assertEquals(weight, -1);
+    }
 }

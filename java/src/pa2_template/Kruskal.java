@@ -1,6 +1,6 @@
 /*
  * A Kruskal's Algorithm Class that defines the function that returns the weight of the minimum spanning tree.
- * Written using the pseudocode provided in Skiena's textbook
+ * Written using the pseudocode provided in Skiena's textbook and received some help from friend Cam Scholl in translating the C pseudocode to java code
  * Written by Josh Planko, github: josh-planko41
  * PA2 - MSTs (4/14/25)
  */
@@ -13,7 +13,7 @@ import java.util.Collections;
 public class Kruskal {
     
     public int kruskal(Graph graph){
-        UnionFind unionFind = new UnionFind(graph.getTotalEdges());
+        UnionFind unionFind = new UnionFind(graph.getTotalEdges() + 1); // To avoid off by one errors
         ArrayList<Edge> edges = new ArrayList<Edge>(graph.getEdgeList());
         int weight = 0;
         int edgeCounter = 0; // to keep track of edges so we know if the graph is disconnected (connected graphs have vertices-1 edges)

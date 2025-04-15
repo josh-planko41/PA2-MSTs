@@ -1,3 +1,11 @@
+/*
+ * A Union-Find data structure class that defines the properties and functions of the Union Find data structure
+ * Written using the pseudocode provided in Skiena's textbook
+ * Written by Josh Planko, github: josh-planko41
+ * PA2 - MSTs (4/14/25)
+ */
+
+
 package pa2_template;
 
 
@@ -10,7 +18,7 @@ public class UnionFind {
     public UnionFind(int setSize){
         this.n = setSize;
         this.p = new int[n + 2];
-        this.size = new int[n + 2];
+        this.size = new int[n + 2]; // avoids off by one errors
 
         for (int i = 0; i < n; i++){
             p[i] = i;
